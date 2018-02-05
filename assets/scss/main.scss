@@ -1,30 +1,30 @@
-@import "import/reset";
-@import "import/variables";
-@import "import/buttons";
-@import "import/forms";
-@import "import/lists";
-@import "import/tables";
-@import "import/mixin";
-@import "import/wordpress";
-
-
-@import "grid/bootstrap";
-@import "grid/bootstrap-theme";
-
-@import "gulp_png_sprite";
-
-
+@import 'import/reset';
+@import 'import/variables';
+@import 'import/buttons';
+@import 'import/forms';
+@import 'import/lists';
+@import 'import/tables';
+@import 'import/mixin';
+@import 'import/wordpress';
+@import 'grid/bootstrap';
+@import 'grid/bootstrap-theme';
+@import 'gulp_png_sprite';
 body {
   font-family: $base-font-family;
   font-size: $base-font-size;
-  font-weight: $fnorm;
+  font-weight: $flight;
   line-height: $base-line-height;
+
   min-width: 320px;
+
   transition: $base-transition;
+
   color: $base-font-color;
   background-color: $base-background-color;
+
   -webkit-font-smoothing: antialiased;
 }
+
 h1,
 h2,
 h3,
@@ -34,15 +34,19 @@ h6 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
   line-height: $heading-line-height;
+
   margin: 0 0 $small-spacing;
 }
+
 p,
 pre {
   margin: 0 0 $small-spacing;
 }
+
 a {
   transition: $base-transition;
   text-decoration: none;
+
   color: $action-color;
   &:active,
   &:focus,
@@ -55,20 +59,25 @@ a {
     outline: none;
   }
 }
+
 hr {
   margin: $base-spacing 0;
+
   border-top: none;
   border-right: none;
   border-bottom: $base-border;
   border-left: none;
 }
+
 img,
 picture {
   max-width: 100%;
   margin: 0;
 }
+
 .wrapper {
   position: relative;
+
   width: 100%;
   height: auto !important;
   height: 100%;
@@ -77,25 +86,82 @@ picture {
 
   @extend .clearfix;
 }
+
 .container {
   position: relative;
+
   max-width: $width;
 }
 
 header {
-  background-color: $gray-light;
+  height: 265px;
+  .header--logo,
+  .header-navlang {
+    height: 160px;
+  }
   .header--logo {
-    display: block;
+    padding-top: 90px;
+
+    text-align: center;
     img {
       max-width: 100%;
     }
   }
-}
-nav {
-  ul {
-    @extend .clearfix;
-    li {
+  .header-navlang {
+    display: flex;
+    flex-direction: row;
+
+    padding-top: 100px;
+
+    align-content: stretch;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    .header-navlang--lang {
       display: inline-block;
+
+      height: 20px;
+      margin: 0 24px 0 0;
+      li {
+        display: inline-block;
+
+        margin: 0 36px 0 0;
+        a {
+          font-size: 13px;
+
+          text-decoration: none;
+          text-transform: uppercase;
+
+          color: #bcbcbc;
+          border-bottom: 1px dotted transparent;
+          &:hover {
+            border-bottom: 1px dotted #000000;
+          }
+        }
+        &.active {
+          a {
+            color: #000000;
+            &:hover {
+              cursor: default;
+
+              border-bottom: 1px dotted transparent;
+            }
+          }
+        }
+      }
+    }
+    .header--nav {
+      display: inline-block;
+
+      width: 36px;
+      height: 20px;
+
+      background-image: url(../img/header--nav.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      ul {
+        display: none;
+      }
     }
   }
 }
@@ -103,21 +169,45 @@ nav {
 section {
   padding: 0 0 $footer;
 }
+
 article {
   @extend .clearfix;
 }
+
 .looper {
   @extend .clearfix;
 }
 
-
 footer {
   height: $footer;
   margin: $footer_margin auto 0;
-  background-color: $gray-light;
+  .footer-copyright,
+  .footer-social {
+    font-size: 15px;
+
+    text-transform: uppercase;
+
+    color: #000000;
+  }
+  .footer-copyright {
+    text-align: left;
+  }
+  .footer-social {
+    text-align: right;
+    a {
+      margin: 0 5px;
+
+      text-decoration: none;
+      &:hover {
+        background-color: $gray-dark;
+
+      }
+
+      color: #000000;
+    }
+  }
 }
 
-
-@import "fonts/font_roboto";
-@import "import/base64";
-@import "import/print";
+@import 'fonts/font_proxima_nova';
+@import 'import/base64';
+@import 'import/print';

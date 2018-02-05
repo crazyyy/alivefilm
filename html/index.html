@@ -30,19 +30,26 @@
     <div class="container">
       <div class="row">
 
-        <div class="header--logo col-md-2">
+        <div class="header--logo col-md-4 col-md-offset-4">
           <img src="img/logo.png" alt="" title="">
         </div><!-- /header--logo -->
 
-        <nav class="header--nav col-md-12" role="navigation">
-          <ul class="headnav">
-            <li><a href="#">menu</a></li>
-            <li><a href="#">menu</a></li>
-            <li><a href="#">menu</a></li>
-            <li><a href="#">menu</a></li>
-            <li><a href="#">menu</a></li>
+        <div class="header-navlang col-md-4">
+          <ul class="header-navlang--lang">
+            <li class="active"><a href="">Eng</a></li>
+            <li><a href="">Rus</a></li>
           </ul>
-        </nav><!-- /header--nav -->
+          <nav class="header--nav" role="navigation">
+            <ul class="headnav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Weddings</a></li>
+              <li><a href="#">Comments</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </nav><!-- /header--nav -->
+        </div><!-- /.header-navlang col-md-4 -->
+
+
 
       </div><!-- /.row -->
     </div><!-- /.container -->
@@ -52,153 +59,20 @@
     <div class="container">
       <div class="row">
 
-        <article class="col-md-8">
-          <h1 class="page-title">Пример контента (рыба)</h1>
-          <p>The purpose of this HTML is to help determine what default settings are with Bitters and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.</p>
-
-          <hr>
-
-          <h1>h1. Heading</h1>
-          <h2>h2. Heading</h2>
-          <h3>h3. Heading</h3>
-          <h4>h4. Heading</h4>
-          <h5>h5. Heading</h5>
-          <h6>h6. Heading</h6>
-
-          <hr>
-
-          <h1 class="ctitle">Paragraph</h1>
-
-          <p>Lorem ipsum dolor sit amet, <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
-
-          <p>Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
-
-          <hr>
-
-          <h1 class="ctitle">List Types</h1>
-
-          <h3>Definition List - dl > dt + dd</h3>
-          <dl>
-            <dt>Definition List Title</dt>
-            <dd>This is a definition list division.</dd>
-          </dl>
-
-          <h3>Ordered List - ol</h3>
-          <ol>
-            <li>List Item 1</li>
-            <li>List Item 2</li>
-            <li>List Item 3</li>
-          </ol>
-
-          <h3>Unordered List - ul</h3>
-          <ul>
-            <li>List Item 1</li>
-            <li>List Item 2</li>
-            <li>List Item 3</li>
-          </ul>
-
-          <hr>
-
-          <h1 class="ctitle">Fieldsets and Form Elements</h1>
-
-          <fieldset>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.</p>
-
-            <form>
-              <h2>Form Element</h2>
-
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui.</p>
-
-              <p><label for="text_field">Text Field:</label>
-                <input type="text" id="text_field"></p>
-
-              <p><label for="text_area">Text Area:</label>
-                <textarea id="text_area"></textarea></p>
-
-              <p><label for="select_element">Select Element:</label>
-                <select name="select_element">
-                  <optgroup label="Option Group 1">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                  </optgroup>
-                  <optgroup label="Option Group 2">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                  </optgroup>
-              </select></p>
-
-              <p><label for="radio_buttons">Radio Buttons:</label>
-                <label>
-                  <input type="radio" class="radio" name="radio_button" value="radio_1"> Radio 1
-                </label>
-                <label>
-                  <input type="radio" class="radio" name="radio_button" value="radio_2"> Radio 2
-                </label>
-                <label>
-                  <input type="radio" class="radio" name="radio_button" value="radio_3"> Radio 3
-                </label>
-              </p>
-
-              <p>
-                <label for="checkboxes">Checkboxes:</label>
-                <label>
-                  <input type="checkbox" class="checkbox" name="checkboxes" value="check_1"> Checkbox 1
-                </label>
-                <label>
-                  <input type="checkbox" class="checkbox" name="checkboxes" value="check_2"> Checkbox 2
-                </label>
-                <label>
-                  <input type="checkbox" class="checkbox" name="checkboxes" value="check_3"> Checkbox 3
-                </label>
-              </p>
-
-              <p><label for="password">Password:</label>
-                <input type="password" class="password" name="password">
-              </p>
-
-              <p><label for="file">File Input:</label>
-                <input type="file" class="file" name="file">
-              </p>
-
-
-              <p><input type="submit" value="Submit"></p>
-            </form>
-          </fieldset>
-
-          <hr>
-
-          <h1 class="ctitle">Tables</h1>
-
-          <table cellspacing="0" cellpadding="0">
-            <tbody>
-              <tr>
-                <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
-              </tr>
-              <tr>
-                <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-              </tr>
-              <tr class="even">
-                <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-              </tr>
-              <tr>
-                <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-              </tr>
-            </tbody>
-          </table>
+        <article class="contact-content col-md-5">
+          <p>свяжитесь с нами любым удобным для вас способом. Мы очень ценим ваше мнение.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro velit aspernatur natus hic quis aperiam doloribus earum accusamus, voluptas, deleniti debitis, officiis facilis est consectetur? Odio perspiciatis aspernatur inventore eaque.</p>
+          <h4>наш телефон:</h4>
+          <a href="tel:+35797797859">+35797797859</a>
+          <h4>наша почта:</h4>
+          <a href="mailto:producer@alivefilmproductions.com">producer@alivefilmproductions.com</a>
         </article>
 
-        <aside class="sidebar col-md-4" role="complementary">
-          <div class="widget">
-            <h6>Пример виджета</h6>
-            <ul>
-              <li class="cat-item-none"><a href="#">name</a></li>
-              <li class="cat-item-none"><a href="#">name</a></li>
-              <li class="cat-item-none"><a href="#">name</a></li>
-            </ul>
-          </div><!-- widget -->
-        </aside><!-- /sidebar -->
+        <article class="contact-form col-md-5 col-md-offset-2" role="complementary">
+          <form action="">
+            <h4>напишите нам, мы очень ценим ваше мнение</h4>
+          </form>
+        </article><!-- /sidebar -->
 
       </div><!-- /.row -->
     </div><!-- /.container -->
@@ -209,15 +83,12 @@
 <footer role="contentinfo">
   <div class="container">
     <div class="row">
-
-      <p class="copyright col-md-12">
-        © 2016 Собственность. Работает на html2wp easy.
-      </p><!-- /copyright -->
-
+      <p class="footer-copyright col-md-6">ALIVE FILM PRODUCTIONS © 2017-2018</p>
+      <p class="footer-social col-md-6">FIND US <a href=""><i class="fab fa-instagram"></i></a><a href=""><i class="fab fa-facebook-square"></i></a><a href=""><i class="fab fa-vimeo-v"></i></a><a href=""><i class="fab fa-vk"></i></a></p>
     </div><!-- /.row -->
   </div><!-- /.container -->
 </footer><!-- /footer -->
-
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
 
