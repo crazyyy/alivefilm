@@ -1,6 +1,6 @@
 {
-  "domain": "wp-framework.work",
-  "theme": "wp-framework",
+  "domain": "alivefilm.work",
+  "theme": "wp-alivefilm",
   "path": {
     "base": {
       "src":"assets/",

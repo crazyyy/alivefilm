@@ -1,7 +1,7 @@
 <?php
-define('DB_NAME', 'DBNAME');
-define('DB_USER', 'DBUSER');
-define('DB_PASSWORD', 'DBPASS');
+define('DB_NAME', 'alivefilm');
+define('DB_USER', 'alivefilm');
+define('DB_PASSWORD', 'alivefilm');
 
 define('DB_HOST', 'localhost');
 
