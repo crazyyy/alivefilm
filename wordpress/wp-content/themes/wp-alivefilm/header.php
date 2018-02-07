@@ -7,7 +7,8 @@
 
   <title><?php wp_title( '' ); ?><?php if ( wp_title( '', false ) ) { echo ' :'; } ?> <?php bloginfo( 'name' ); ?></title>
 
-  <link href="http://www.google-analytics.com/" rel="dns-prefetch"><!-- dns prefetch -->
+  <link href="//www.google-analytics.com/" rel="dns-prefetch">
+  <link href="//cdnjs.cloudflare.com" rel="dns-prefetch">
 
   <!-- icons -->
   <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon">
@@ -18,30 +19,38 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <!-- css + javascript -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
   <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
-<!-- wrapper -->
+<body <?php body_class('hidden'); ?>>
+
 <div class="wrapper">
   <header role="banner">
-    <div class="inner">
+    <div class="container">
+      <div class="row">
 
-      <div class="logo">
-        <?php if ( !is_front_page() && !is_home() ){ ?>
-          <a href="<?php echo home_url(); ?>">
-        <?php } ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
-        <?php if ( !is_front_page() && !is_home() ){ ?>
-          </a>
-        <?php } ?>
-      </div><!-- /logo -->
+        <div class="header--logo col-md-4 col-md-offset-4">
+          <?php if ( !is_front_page() && !is_home() ){ ?>
+            <a href="<?php echo home_url(); ?>">
+          <?php } ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
+          <?php if ( !is_front_page() && !is_home() ){ ?>
+            </a>
+          <?php } ?>
+        </div><!-- /header--logo -->
 
-      <nav class="nav" role="navigation">
-        <?php wpeHeadNav(); ?>
-      </nav><!-- /nav -->
+        <div class="header-navlang col-md-4">
+          <ul class="header-navlang--lang">
+            <li class="active"><a href="">Eng</a></li>
+            <li><a href="">Rus</a></li>
+          </ul>
+          <button class="header--nav" role="navigation"></button>
+        </div><!-- /.header-navlang col-md-4 -->
 
-    </div><!-- /.inner -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
   </header><!-- /header -->
 
   <section role="main">
-    <div class="inner">
+    <?php wpeHeadNav(); ?>

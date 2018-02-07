@@ -1,0 +1,1 @@
+[text* your-name placeholder "Имя"][email* your-email placeholder "E-mail"][textarea your-message placeholder "Сообщение"][submit "Отправить >"]

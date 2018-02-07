@@ -1,10 +1,10 @@
 <?php get_header(); ?>
-  <article>
 
-    <h1 class="cat-title inner-title"><?php the_category(', '); ?></h1>
-    <?php get_template_part('loop'); ?>
+  <div class="container">
+    <div class="row">
+      <?php get_template_part('loop'); ?>
+    </div><!-- /.row -->
     <?php get_template_part('pagination'); ?>
+  </div>
 
-  </article>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

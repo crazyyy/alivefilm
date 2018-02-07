@@ -140,7 +140,7 @@ function wpeFootNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="footernav">%3$s</ul>',
+    'items_wrap'      => '<ul class="modalnav">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
     )

@@ -46,3 +46,35 @@ if (typeof jQuery === "undefined") {
   console.log("jQuery " + jQuery.fn.jquery + " has loaded")
 }
 // Place any jQuery/helper plugins in here.
+jQuery(document).ready(function($) {
+  $('body').fadeIn(3000).removeClass('hidden');
+
+  $('article iframe').each(function(index, el) {
+    $(el).wrap('<div class="embed-container"></div>')
+  });
+  $('.header--nav').on('click', function(e) {
+    e.preventDefault();
+    $('.modalnav').toggleClass('modalnav--opened');
+    $('body').toggleClass('modaled')
+  })
+  $('.modalnav').on('click', function(e) {
+      e.stopPropagation();
+      $('.modalnav').toggleClass('modalnav--opened');
+      $('body').toggleClass('modaled')
+    })
+    $("a").click(function(event) {
+      event.preventDefault();
+      linkLocation = this.href;
+      $("body").fadeOut(3000, redirectPage(linkLocation));
+    });
+
+
+  $('.looper').each(function(index, el) {
+    var height = $(el).children('.feature-img').children('img').height();
+    $(el).children('.inner-title').height(height);
+  });
+});
+
+function redirectPage(link) {
+  document.location.href = link;
+}
