@@ -1,4 +1,4 @@
-  <div class="container--loop">
+  <div class="container--loop" id="posts_list">
     <?php $i = 0; if (have_posts()): while (have_posts()) : the_post(); ?>
 
     <?php if ($i == 1) { echo '<div class="looper-container-delimetr">'; } ?>

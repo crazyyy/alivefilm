@@ -1,3 +1,1 @@
-<div class="pagination">
-  <!-- noindex --><?php html5wp_pagination(); ?><!-- /noindex -->
-</div><!-- /pagination -->
+<button class="load_more" data-nonce="<?php echo wp_create_nonce('load_posts') ?>"></button>

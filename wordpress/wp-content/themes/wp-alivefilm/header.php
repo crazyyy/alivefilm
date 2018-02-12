@@ -30,7 +30,7 @@
     <div class="container">
       <div class="row">
 
-        <div class="header--logo col-md-4 col-md-offset-4">
+        <div class="header--logo col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
           <?php if ( !is_front_page() && !is_home() ){ ?>
             <a href="<?php echo home_url(); ?>">
           <?php } ?>
@@ -40,11 +40,13 @@
           <?php } ?>
         </div><!-- /header--logo -->
 
-        <div class="header-navlang col-md-4">
-          <ul class="header-navlang--lang">
-            <li class="active"><a href="">Eng</a></li>
-            <li><a href="">Rus</a></li>
-          </ul>
+        <div class="header-navlang col-md-4 col-sm-12 col-xs-12">
+          <?php
+            qtranxf_generateLanguageSelectCode(array(
+              'type'   => 'custom',
+              'format' => ''
+            ))
+          ?>
           <button class="header--nav" role="navigation"></button>
         </div><!-- /.header-navlang col-md-4 -->
 

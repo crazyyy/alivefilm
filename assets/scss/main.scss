@@ -28,10 +28,12 @@ body {
     header {
       height: 230px;
     }
-    header .header-navlang .header-navlang--lang li a {
+    header .header-navlang .header-navlang--lang li a,
+    header .header-navlang .language-chooser li a {
       color: #000000;
     }
-    header .header-navlang .header-navlang--lang li.active a {
+    header .header-navlang .header-navlang--lang li.active a,
+    header .header-navlang .language-chooser  li.active a {
       font-weight: bold;
     }
     article {
@@ -154,7 +156,8 @@ header {
     align-items: flex-start;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    .header-navlang--lang {
+    .header-navlang--lang,
+    .language-chooser {
       display: inline-block;
 
       height: 20px;
@@ -707,6 +710,28 @@ article {
 
   text-align: center;
 }
+.load_more {
+  font-size: 0;
+
+  display: block;
+
+  width: 57px;
+  height: 23px;
+  margin: 20px auto;
+
+  border-radius: 0;
+  background-color: transparent;
+  background-image: url(../img/load_more.png);
+  &.end_of_posts {
+    display: none;
+  }
+  &:focus,
+  &:hover {
+    opacity: .8;
+    outline: none;
+    background-color: transparent;
+  }
+}
 .video-background {
   width: 100vw;
   height: 100vh;
@@ -747,6 +772,59 @@ footer {
     }
   }
 }
+
+@media (max-width: 998px) {
+  header {
+    height: auto !important;
+    .header-navlang {
+      padding-top: 20px;
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .reviews-container,
+  .container--loop {
+    .looper-container-delimetr,
+    .reviews-container-delimetr {
+      display: block;
+    }
+    .looper {
+      float: none !important;
+
+      width: 100% !important;
+      margin-bottom: 20px !important;
+      padding: 0 !important;
+      .feature-img {
+        float: none !important;
+
+        width: 90% !important;
+        margin: 0 auto 20px !important;
+        padding-top: 0 !important;
+
+        text-align: center;
+      }
+      .inner-title {
+        display: block;
+
+        height: auto !important;
+        padding-top: 0 !important;
+        padding-right: 5% !important;
+        padding-bottom: 0 !important;
+        padding-left: 5% !important;
+        a,
+        .date {
+          text-align: center;
+        }
+        .content-block,
+        blockquote,
+        .quote-block {
+          width: auto !important;
+        }
+      }
+    }
+  }
+}
+
 
 @import 'fonts/font_proxima_nova';
 @import 'import/base64';
