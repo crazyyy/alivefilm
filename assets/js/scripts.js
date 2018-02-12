@@ -58,23 +58,42 @@ jQuery(document).ready(function($) {
     $('body').toggleClass('modaled')
   })
   $('.modalnav').on('click', function(e) {
-      e.stopPropagation();
-      $('.modalnav').toggleClass('modalnav--opened');
-      $('body').toggleClass('modaled')
-    })
-    $("a").click(function(event) {
-      event.preventDefault();
-      linkLocation = this.href;
-      $("body").fadeOut(3000, redirectPage(linkLocation));
-    });
+    e.stopPropagation();
+    $('.modalnav').toggleClass('modalnav--opened');
+    $('body').toggleClass('modaled')
+  })
+  $("a").click(function(event) {
+    event.preventDefault();
+    linkLocation = this.href;
+    $("body").fadeOut(3000, redirectPage(linkLocation));
+  });
 
 
   $('.looper').each(function(index, el) {
     var height = $(el).children('.feature-img').children('img').height();
     $(el).children('.inner-title').height(height);
   });
+
+
+  if ($('body').hasClass('page-template-front-page')) {
+    changeVideoBackground();
+    window.addEventListener('resize', changeVideoBackground);
+  }
+
+
 });
 
 function redirectPage(link) {
   document.location.href = link;
+}
+
+function changeVideoBackground() {
+  const videoMaxWidth = 800;
+  const videoAspectRatio = 9 / 16;
+  const videoBackground = document.querySelector('.video-background');
+  if (window.innerWidth > videoMaxWidth) {
+    videoBackground.style.height = `${ videoMaxWidth * videoAspectRatio }px`;
+  } else {
+    videoBackground.style.height = `${ window.innerWidth * videoAspectRatio }px`;
+  }
 }
