@@ -3473,6 +3473,11 @@ article .embed-container embed {
   justify-content: space-around;
 }
 
+.contact-form h4 {
+  width: 100%;
+  text-align: left;
+}
+
 .contact-form .your-email,
 .contact-form .your-name {
   display: inline-block;
@@ -3515,6 +3520,11 @@ article .embed-container embed {
 .contact-form .wpcf7-submit:hover {
   color: #565656;
   background-color: transparent;
+}
+
+.row .row--nomargin {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .looper {
@@ -3570,9 +3580,9 @@ article .embed-container embed {
 }
 
 .pagination {
+  display: none;
   padding: 10px 0;
   text-align: center;
-  display: none;
 }
 
 footer {

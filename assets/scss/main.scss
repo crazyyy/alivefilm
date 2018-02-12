@@ -57,6 +57,7 @@ body {
   }
   &.hidden {
     display: none;
+
     background-color: #ffffff;
   }
 }
@@ -361,6 +362,11 @@ article {
   @extend .clearfix;
   flex-wrap: wrap;
   justify-content: space-around;
+  h4 {
+    width: 100%;
+
+    text-align: left;
+  }
   .your-email,
   .your-name {
     display: inline-block;
@@ -405,6 +411,12 @@ article {
     }
   }
 }
+.row {
+  .row--nomargin {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .looper {
   margin-bottom: 30px;
 
@@ -434,7 +446,7 @@ article {
     flex-wrap: nowrap;
     justify-content: center;
     &.inner-title--reverse {
-       align-items: flex-end;
+      align-items: flex-end;
     }
     a,
     span {
@@ -457,9 +469,11 @@ article {
 }
 
 .pagination {
-  padding: 10px 0;
-  text-align: center;
   display: none;
+
+  padding: 10px 0;
+
+  text-align: center;
 }
 
 footer {
