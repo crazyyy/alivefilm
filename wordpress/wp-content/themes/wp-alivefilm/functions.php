@@ -38,7 +38,7 @@ function wpeStyles()  {
   wp_dequeue_style('fancybox');
   wp_dequeue_style('wp_dequeue_style');
 
-  wp_register_style('wpeasy-style', get_template_directory_uri() . '/css/main.css', array(), '1.2', 'all');
+  wp_register_style('wpeasy-style', get_template_directory_uri() . '/css/main.css', array(), '1.35', 'all');
   wp_enqueue_style('wpeasy-style'); // Enqueue it!
 }
 
@@ -719,7 +719,7 @@ function post_type_review() {
 // enqueue_scripts: make sure to include ajaxurl, so we know where to send the post request
 function dt_add_main_js(){
 
-  wp_register_script( 'main-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.3', false );
+  wp_register_script( 'main-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.35', false );
   wp_enqueue_script( 'main-js' );
   wp_localize_script( 'main-js', 'headJS', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'templateurl' => get_template_directory_uri(), 'posts_per_page' => get_option('posts_per_page') ) );
 

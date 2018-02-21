@@ -1,4 +1,5 @@
 <?php
+
 define('DB_NAME', 'alivefilm');
 define('DB_USER', 'alivefilm');
 define('DB_PASSWORD', 'alivefilm');

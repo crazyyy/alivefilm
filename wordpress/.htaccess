@@ -461,3 +461,20 @@ FileETag None
     ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
 
 </IfModule>
+
+
+# Wordfence WAF
+<IfModule mod_php5.c>
+	php_value auto_prepend_file 'D:\Works\Verstka\alivefilm\wordpress/wordfence-waf.php'
+</IfModule>
+<Files ".user.ini">
+<IfModule mod_authz_core.c>
+	Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+	Order deny,allow
+	Deny from all
+</IfModule>
+</Files>
+
+# END Wordfence WAF

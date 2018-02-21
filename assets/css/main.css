@@ -3144,10 +3144,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body.home {
-  background-color: #dec1b9;
-}
-
 body.home header {
   height: 230px;
 }
@@ -3172,6 +3168,41 @@ body.home article h1 {
 
 body.home article h1 span {
   display: block;
+}
+
+body.home section {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  padding: 0;
+  opacity: 1;
+  background-color: #121212;
+}
+
+body.home header {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+body.home footer {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+body.home footer .footer-copyright,
+body.home footer .footer-social {
+  color: #ffffff !important;
+}
+
+body.home footer .footer-copyright a,
+body.home footer .footer-social a {
+  color: #ffffff !important;
 }
 
 body.modaled .embed-container {
@@ -3742,6 +3773,11 @@ article .embed-container embed {
   text-transform: uppercase;
 }
 
+.container--loop {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .container--loop .feature-img {
   display: block;
 }
@@ -3839,16 +3875,57 @@ article .embed-container embed {
   background-color: transparent;
 }
 
-.video-background {
-  width: 100vw;
-  height: 100vh;
+.background-video-container {
+  z-index: 1;
+  pointer-events: none;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  left: 0rem;
 }
 
-.video-background iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
+.background-video-container video {
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  /* background-image: url('*** Poster image goes here ***'); */
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  right: 0rem;
+  bottom: 0rem;
+  left: 50%;
+}
+
+.background-video-overlay {
+  z-index: 20;
+  height: 100vh;
+  color: blue;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+}
+
+.background-video-overlay h1 {
+  font-size: 24px;
+  line-height: 100px;
+  width: 400px;
+  height: 100px;
+  margin: -50px 0 0 -200px;
+  text-align: center;
+  color: #121212;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
 }
 
 footer {

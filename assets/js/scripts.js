@@ -74,8 +74,8 @@ jQuery(document).ready(function($) {
   });
 
   if ($('body').hasClass('page-template-front-page')) {
-    changeVideoBackground();
-    window.addEventListener('resize', changeVideoBackground);
+
+
   }
 
   $('.language-chooser-item a').each(function(index, el) {
@@ -127,19 +127,4 @@ jQuery(document).ready(function($) {
 
 function redirectPage(link) {
   document.location.href = link;
-}
-
-function changeVideoBackground() {
-  var videoMaxWidth = 800;
-  var videoAspectRatio = 9 / 16;
-  var videoBackground = document.querySelector('.video-background');
-  if (window.innerWidth > videoMaxWidth) {
-    var height = videoMaxWidth * videoAspectRatio;
-    height = height + 'px';
-    videoBackground.style.height = height;
-  } else {
-    var height = window.innerWidth * videoAspectRatio;
-    height = height + 'px';
-    videoBackground.style.height = height;
-  }
 }
