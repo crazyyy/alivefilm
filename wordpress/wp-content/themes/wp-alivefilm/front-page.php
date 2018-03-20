@@ -30,7 +30,6 @@
 </head>
 <body>
 
-
   <div class="fullscreen-bg">
     <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
       <source src="<?php echo get_template_directory_uri(); ?>/video/big_buck_bunny.webm" type="video/webm">
