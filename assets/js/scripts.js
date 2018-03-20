@@ -75,7 +75,6 @@ jQuery(document).ready(function($) {
 
   if ($('body').hasClass('page-template-front-page')) {
 
-
   }
 
   $('.language-chooser-item a').each(function(index, el) {
@@ -123,8 +122,22 @@ jQuery(document).ready(function($) {
     });
   });
 
+  // MakeVideoBgSize()
+
+});
+
+$(document).resize(function(event) {
+  /* Act on the event */
+  // MakeVideoBgSize()
 });
 
 function redirectPage(link) {
   document.location.href = link;
+}
+
+function MakeVideoBgSize(){
+  var $videoBg = $('#video-background');
+  var windowHeight = $(window).height();
+  var newSize = windowHeight + ((windowHeight / 100) * 10) + 'px';
+  $videoBg.css('min-height', newSize)
 }
