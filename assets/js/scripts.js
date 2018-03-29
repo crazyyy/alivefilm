@@ -1,143 +1,55 @@
-// Avoid `console` errors in browsers that lack a console.
-(function() {
-  var method
-  var noop = function() {}
-  var methods = [
-    "assert",
-    "clear",
-    "count",
-    "debug",
-    "dir",
-    "dirxml",
-    "error",
-    "exception",
-    "group",
-    "groupCollapsed",
-    "groupEnd",
-    "info",
-    "log",
-    "markTimeline",
-    "profile",
-    "profileEnd",
-    "table",
-    "time",
-    "timeEnd",
-    "timeline",
-    "timelineEnd",
-    "timeStamp",
-    "trace",
-    "warn"
-  ]
-  var length = methods.length
-  var console = (window.console = window.console || {})
-
-  while (length--) {
-    method = methods[length]
-
-    // Only stub undefined methods.
-    if (!console[method]) {
-      console[method] = noop
-    }
-  }
-})()
-if (typeof jQuery === "undefined") {
-  console.warn("jQuery hasn't loaded")
-} else {
-  console.log("jQuery " + jQuery.fn.jquery + " has loaded")
+function redirectPage(e) {
+  document.location.href = e
 }
-// Place any jQuery/helper plugins in here.
-jQuery(document).ready(function($) {
-  $('body').fadeIn(3000).removeClass('hidden');
 
-  $('article iframe').each(function(index, el) {
-    $(el).wrap('<div class="embed-container"></div>')
-  });
-  $('.header--nav').on('click', function(e) {
-    e.preventDefault();
-    $('.modalnav').toggleClass('modalnav--opened');
-    $('body').toggleClass('modaled')
-  })
-  $('.modalnav').on('click', function(e) {
-    e.stopPropagation();
-    $('.modalnav').toggleClass('modalnav--opened');
-    $('body').toggleClass('modaled')
-  })
-  $("a").click(function(event) {
-    event.preventDefault();
-    linkLocation = this.href;
-    $("body").fadeOut(3000, redirectPage(linkLocation));
-  });
-
-  $('.looper').each(function(index, el) {
-    var height = $(el).children('.feature-img').children('img').height();
-    $(el).children('.inner-title').height(height);
-  });
-
-  if ($('body').hasClass('page-template-front-page')) {
-
-  }
-
-  $('.language-chooser-item a').each(function(index, el) {
-    if (index == 0) {
-      $(this).html('RU');
-    } else {
-      $(this).html('EN');
-    }
-  });
-
-  $('.load_more:not(.loading)').live('click', function(e) {
-    e.preventDefault();
-    console.log('fire');
-    var $load_more_btn = $(this);
-    var post_type = 'post'; // this is optional and can be set from anywhere, stored in mockup etc...
-    var offset = $('#posts_list .looper').length;
-    var nonce = $load_more_btn.attr('data-nonce');
-    $.ajax({
+function MakeVideoBgSize() {
+  var e = $("#video-background"),
+    o = $(window).height(),
+    n = o + o / 100 * 10 + "px";
+  e.css("min-height", n)
+}! function() {
+  for (var e, o = ["assert", "clear", "count", "debug", "dir", "dirxml", "error", "exception", "group", "groupCollapsed", "groupEnd", "info", "log", "markTimeline", "profile", "profileEnd", "table", "time", "timeEnd", "timeline", "timelineEnd", "timeStamp", "trace", "warn"], n = o.length, a = window.console = window.console || {}; n--;) a[e = o[n]] || (a[e] = function() {})
+}(), "undefined" == typeof jQuery ? console.warn("jQuery hasn't loaded") : console.log("jQuery " + jQuery.fn.jquery + " has loaded"), jQuery(document).ready(function(e) {
+  e("body").fadeIn(3e3).removeClass("hidden"), e("article iframe").each(function(o, n) {
+    e(n).wrap('<div class="embed-container"></div>')
+  }), e(".header--nav").on("click", function(o) {
+    o.preventDefault(), e(".modalnav").toggleClass("modalnav--opened"), e("body").toggleClass("modaled")
+  }), e(".modalnav").on("click", function(o) {
+    o.stopPropagation(), e(".modalnav").toggleClass("modalnav--opened"), e("body").toggleClass("modaled")
+  }), e("a").click(function(o) {
+    o.preventDefault(), linkLocation = this.href, e("body").fadeOut(3e3, redirectPage(linkLocation))
+  }), e(".looper").each(function(o, n) {
+    var a = e(n).children(".feature-img").children("img").height();
+    e(n).children(".inner-title").height(a)
+  }), e("body").hasClass("page-template-front-page"), e(".language-chooser-item a").each(function(o, n) {
+    0 == o ? e(this).html("RU") : e(this).html("EN")
+  }), e(".load_more:not(.loading)").live("click", function(o) {
+    o.preventDefault(), console.log("fire");
+    var n = e(this),
+      a = e("#posts_list .looper").length,
+      t = n.attr("data-nonce");
+    e.ajax({
       type: "post",
       context: this,
       dataType: "json",
       url: headJS.ajaxurl,
       data: {
         action: "load_more",
-        offset: offset,
-        nonce: nonce,
-        post_type: post_type,
+        offset: a,
+        nonce: t,
+        post_type: "post",
         posts_per_page: headJS.posts_per_page
       },
-      beforeSend: function(data) {
-        // here u can do some loading animation...
-        $load_more_btn.addClass('loading'); // good for styling and also to prevent ajax calls before content is loaded by adding loading class
+      beforeSend: function(e) {
+        n.addClass("loading")
       },
-      success: function(response) {
-        console.log(response)
-        if (response['have_posts'] == 1) { //if have posts:
-          $load_more_btn.removeClass('loading');
-          var $newElems = $(response['html'].replace(/(\r\n|\n|\r)/gm, '')); // here removing extra breaklines and spaces
-          $('#posts_list').append($newElems);
-        } else {
-          //end of posts (no posts found)
-          $load_more_btn.removeClass('loading').addClass('end_of_posts'); // change buttom styles if no more posts
-        }
+      success: function(o) {
+        if (console.log(o), 1 == o.have_posts) {
+          n.removeClass("loading");
+          var a = e(o.html.replace(/(\r\n|\n|\r)/gm, ""));
+          e("#posts_list").append(a)
+        } else n.removeClass("loading").addClass("end_of_posts")
       }
-    });
-  });
-
-  // MakeVideoBgSize()
-
-});
-
-$(document).resize(function(event) {
-  /* Act on the event */
-  // MakeVideoBgSize()
-});
-
-function redirectPage(link) {
-  document.location.href = link;
-}
-
-function MakeVideoBgSize(){
-  var $videoBg = $('#video-background');
-  var windowHeight = $(window).height();
-  var newSize = windowHeight + ((windowHeight / 100) * 10) + 'px';
-  $videoBg.css('min-height', newSize)
-}
+    })
+  })
+}), $(document).resize(function(e) {});
