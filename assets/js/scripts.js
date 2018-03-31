@@ -18,9 +18,6 @@ function MakeVideoBgSize() {
     o.stopPropagation(), e(".modalnav").toggleClass("modalnav--opened"), e("body").toggleClass("modaled")
   }), e("a").click(function(o) {
     o.preventDefault(), linkLocation = this.href, e("body").fadeOut(3e3, redirectPage(linkLocation))
-  }), e(".looper").each(function(o, n) {
-    var a = e(n).children(".feature-img").children("img").height();
-    e(n).children(".inner-title").height(a)
   }), e("body").hasClass("page-template-front-page"), e(".language-chooser-item a").each(function(o, n) {
     0 == o ? e(this).html("RU") : e(this).html("EN")
   }), e(".load_more:not(.loading)").live("click", function(o) {

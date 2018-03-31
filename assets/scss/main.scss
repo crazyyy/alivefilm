@@ -2279,18 +2279,16 @@ picture {
 }header .header--logo,
 header .header-navlang {
   height: 160px;
-}header .header--logo {
-  padding-top: 90px;
+}
+header .header--logo {
+  padding-top: 80px;
 
   text-align: center;
-}header .header--logo img {
+}
+header .header--logo img {
   max-width: 100%;
 }header .header-navlang {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display:    -moz-box;
-  display: -ms-flexbox;
-  display:         flex;
+  display: flex;
           flex-direction: row;
 
   padding-top: 100px;
@@ -2650,166 +2648,188 @@ article .embed-container object {
 }.looper .inner-title .date {
   font-size: 20px;
   font-style: italic;
-}.reviews-container {
-          flex-direction: column;
+}
 
-  -webkit-align-items: stretch;
-          align-items: stretch;
-  -webkit-box-align: stretch;
-     -moz-box-align: stretch;
-  -webkit-box-orient: vertical;
-     -moz-box-orient: vertical;
-  -ms-flex-align: stretch;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+
+  align-content: flex-start;
+  align-items: stretch;
   -ms-flex-line-pack: start;
   -ms-flex-pack: start;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-}.reviews-container,
-.reviews-container .reviews-container-delimetr {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display:    -moz-box;
-  display: -ms-flexbox;
-  display:         flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  .reviews-container-delimetr {
+    display: flex;
+    flex-direction: row;
 
-  -webkit-align-content: flex-start;
-          align-content: flex-start;
-  -webkit-box-direction: normal;
-     -moz-box-direction: normal;
-  -webkit-box-pack: start;
-     -moz-box-pack: start;
-  -webkit-justify-content: flex-start;
-          justify-content: flex-start;
-}.reviews-container .reviews-container-delimetr {
-          flex-direction: row;
+    margin-bottom: 80px;
 
-  margin-bottom: 80px;
+    align-content: flex-start;
+    align-items: flex-start;
+    -webkit-box-align: start;
+       -moz-box-align: start;
+    -ms-flex-align: start;
+    -ms-flex-line-pack: start;
+    -ms-flex-pack: start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .looper {
+      &:first-child {
+        order: 2;
+      }
+      &:nth-child(2) {
+        order: 1;
+      }
+    }
+  }
+  .looper {
+    .feature-img {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+    .inner-title {
+      a {
+        font-size: 21px;
 
-  -webkit-align-items: flex-start;
-          align-items: flex-start;
-  -webkit-box-align: start;
-     -moz-box-align: start;
-  -webkit-box-orient: horizontal;
-     -moz-box-orient: horizontal;
-  -ms-flex-align: start;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-  -ms-flex-line-pack: start;
-  -ms-flex-pack: start;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-}.reviews-container .reviews-container-delimetr .looper:first-child {
-  -webkit-box-ordinal-group: 3;
-     -moz-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  -webkit-order: 2;
-          order: 2;
-}.reviews-container .reviews-container-delimetr .looper:nth-child(2) {
-  -webkit-box-ordinal-group: 2;
-     -moz-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  -webkit-order: 1;
-          order: 1;
-}.reviews-container .looper .feature-img {
-  display: block;
-}.reviews-container .looper .feature-img img {
-  width: 100%;
-}.reviews-container .looper .inner-title a {
-  font-size: 23px;
+        margin-bottom: 0;
 
-  margin-bottom: 0;
+        text-transform: uppercase;
 
-  text-transform: uppercase;
+        color: #000000;
+      }
+      .date {
+        font-size: 16px;
+        font-style: italic;
 
-  color: #000000;
-}.reviews-container .looper .inner-title .date {
-  font-size: 18px;
-  font-style: italic;
+        margin-bottom: 20px;
 
-  margin-bottom: 20px;
+        color: #565656;
+      }
+      .content-block,
+      .quote-block,
+      blockquote {
+        width: 400px;
+      }
+      .content-block {
+        font-size: 16px;
 
-  color: #565656;
-}.reviews-container .looper .inner-title .content-block,
-.reviews-container .looper .inner-title .quote-block,
-.reviews-container .looper .inner-title blockquote {
-  width: 400px;
-}.reviews-container .looper .inner-title .content-block {
-  font-size: 18px;
+        margin-bottom: 16px;
 
-  margin-bottom: 16px;
+        color: #a3a3a3;
+      }
+      blockquote {
+        font-size: 28px;
+        font-style: italic;
 
-  color: #a3a3a3;
-}.reviews-container .looper .inner-title blockquote {
-  font-size: 31px;
-  font-style: italic;
+        margin-bottom: 25px;
+        padding-left: 25px;
 
-  margin-bottom: 25px;
-  padding-left: 25px;
+        text-align: right;
 
-  text-align: right;
+        color: #323232;
+      }
+      .quote-block {
+        font-size: 16px;
 
-  color: #323232;
-}.reviews-container .looper .inner-title .quote-block {
-  font-size: 18px;
+        color: #a3a3a3;
+      }
+    }
+    &.looper-0 {
+      width: 100%;
+      margin-bottom: 10px;
+      .feature-img {
+        float: left;
 
-  color: #a3a3a3;
-}.reviews-container .looper.looper-0 {
-  width: 100%;
-  margin-bottom: 10px;
-}.reviews-container .looper.looper-0 .feature-img {
-  float: left;
+        width: 36%;
+        margin-right: 50px;
+      }
+    }
+    &.looper-1 {
+      width: 59%;
+      height: 520px;
+      .feature-img {
+        float: right;
 
-  width: 37%;
-  margin-right: 60px;
-}.reviews-container .looper.looper-1 {
-  width: 59%;
-}.reviews-container .looper.looper-1 .feature-img {
-  float: right;
+        width: 350px;
+        margin-right: 100px;
+        margin-left: 65px;
 
-  width: 350px;
-  margin-right: 100px;
-  margin-left: 65px;
+        align-self: flex-end;
+        -ms-flex-item-align: end;
+      }
+      blockquote {
+        width: auto;
+      }
+      .quote-block {
+        display: none;
+      }
+      .inner-title {
+        height: 520px;
+      }
+    }
+    &.looper-2 {
+      width: 41%;
+      .feature-img,
+      .inner-title {
+        padding-top: 300px;
+      }
+      .inner-title {
+        padding-top: 340px;
+      }
+      .feature-img {
+        float: left;
 
-  -webkit-align-self: flex-end;
-          align-self: flex-end;
-  -ms-flex-item-align: end;
-}.reviews-container .looper.looper-1 blockquote {
-  width: auto;
-}.reviews-container .looper.looper-1 .quote-block {
-  display: none;
-}.reviews-container .looper.looper-2 {
-  width: 41%;
-}.reviews-container .looper.looper-2 .feature-img,
-.reviews-container .looper.looper-2 .inner-title {
-  padding-top: 300px;
-}.reviews-container .looper.looper-2 .feature-img {
-  float: left;
+        width: 240px;
+        margin-right: 40px;
+        margin-bottom: 40px;
+        margin-left: 70px;
+      }
+      .quote-block,
+      blockquote {
+        padding-right: 180px;
+      }
+      .content-block {
+        display: none;
+      }
+    }
+    &.looper-3 {
+      width: 100%;
+      height: 530px;
+      margin-bottom: 300px;
+      padding-left: 40%;
+      .inner-title {
+        display: block;
 
-  width: 240px;
-  margin-right: 40px;
-  margin-bottom: 40px;
-  margin-left: 70px;
-}.reviews-container .looper.looper-2 .quote-block,
-.reviews-container .looper.looper-2 blockquote {
-  padding-right: 180px;
-}.reviews-container .looper.looper-2 .content-block {
-  display: none;
-}.reviews-container .looper.looper-3 {
-  width: 100%;
-  margin-bottom: 300px;
-  padding-left: 40%;
-}.reviews-container .looper.looper-3 .inner-title {
-  display: block;
-}.reviews-container .looper.looper-3 .feature-img {
-  float: right;
+        height: 530px;
+      }
+      .feature-img {
+        float: right;
 
-  width: 56%;
-  margin-left: 60px;
-}.inner-title a {
+        width: 56%;
+        margin-left: 60px;
+      }
+    }
+    &.looper-4 {
+      height: 460px;
+      .inner-title {
+        height: 460px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+.inner-title a {
   text-transform: uppercase;
 }.container--loop {
   padding-right: 15px;
