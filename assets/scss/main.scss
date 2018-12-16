@@ -4025,7 +4025,7 @@ footer .footer-social a:hover {
     width: auto!important;
   }
   .reviews-container .looper .feature-img img {
-width: auto;
+    width: auto;
   }
   .reviews-container .looper .inner-title blockquote {
     font-size: 22px;
@@ -4085,14 +4085,96 @@ width: auto;
 }
 
 @media (max-width:767px) {
+  header {
+    .header--logo {
+      padding-top: 40px;
+    }
+    .header-navlang {
+      .header--nav,
+      .language-chooser {
+        position: absolute;
+        top: -110px;
+      }
+      .header--nav {
+        right: 30px;
+      }
+      .language-chooser {
+        left: 30px;
+
+        padding: 0;
+        li {
+          margin-right: 10px;
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  body.category .headnav,
+  body.page-template-page-weddings .headnav,
+  body.single .headnav {
+    margin-top: -40px;
+  }
+
   .fullscreen-bg {
     background: url(../img/videoframe.jpg) 50%/cover no-repeat;
   }
   .fullscreen-bg__video {
     display: none;
   }
-}
+  body.home {
+    footer {
+      bottom: 20px;
+      .footer-copyright,
+      .footer-copyright a,
+      .footer-social,
+      .footer-social a {
+        color: #000000 !important;
+      }
+    }
+  }
+  .contact-form {
+    width: 70%;
+    min-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contact-content {
+    width: 70%;
+    min-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    > * {
+      &:nth-child(1) {
+        margin-bottom: 20px;
 
+        text-align: center;
+
+        color: #000000;
+      }
+    }
+    h4,
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
+@media (max-width:650px) {
+  header {
+    .header--logo {
+      padding-top: 60px;
+    }
+    .header-navlang {
+      .header--nav,
+      .language-chooser {
+        position: absolute;
+        top: -130px;
+      }
+    }
+  }
+}
 @media (max-width:440px) {
   .headnav li {
     display: block;
@@ -4100,8 +4182,7 @@ width: auto;
     width: 100%;
   }
   .modalnav {
-    -webkit-background-size: 80% auto;
-            background-size: 80% auto;
+    background-size: 80% auto;
   }
 }
 

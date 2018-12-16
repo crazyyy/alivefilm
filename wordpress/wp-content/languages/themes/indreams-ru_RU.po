@@ -1,0 +1,286 @@
+# Translation of InDreams in Russian
+# This file is distributed under the same license as the InDreams package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2015-12-15 14:20:46+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
+"Project-Id-Version: InDreams\n"
+
+#. Theme Name of the plugin/theme
+msgid "InDreams"
+msgstr "InDreams"
+
+#. Description of the plugin/theme
+msgid "InDreams is a beautiful theme, designed especially for business websites. This theme has many customizable features that will help you showcase your company's web presence."
+msgstr "InDreams — красивая тема, созданная для деловых сайтов. В ней есть много настраиваемых функций, которые помогут вам достойно представить свою компанию в Сети."
+
+#. Template Name of the plugin/theme
+msgid "Blog"
+msgstr "Блог"
+
+#: loop.php:41
+msgid "Continue reading . . . %s"
+msgstr "Читать далее... %s"
+
+#: single.php:53
+msgid "<span class=\"meta-nav\">&larr;</span> Previous Post <span class=\"post-title\">%title</span>"
+msgstr "<span class=\"meta-nav\">&larr;</span> Предыдущая запись <span class=\"post-title\">%title</span>"
+
+#: single.php:55
+msgid "Next Post <span class=\"meta-nav\">&rarr;</span><span class=\"post-title\">%title</span>"
+msgstr "Следующая запись <span class=\"meta-nav\">&rarr;</span><span class=\"post-title\">%title</span>"
+
+#: header.php:17
+msgid "Skip to content"
+msgstr "Перейти к содержимому"
+
+#. Translators: If there are characters in your language that are not supported
+#. by Arvo, translate this to 'off'. Do not translate into your own language.
+#: functions.php:13
+msgctxt "Arvo font: on or off"
+msgid "on"
+msgstr "off"
+
+#: functions/define_template.php:38
+msgid "Archives"
+msgstr "Архивы"
+
+#: functions/define_template.php:37
+msgid "Categories"
+msgstr "Рубрики"
+
+#: functions/define_template.php:36
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: functions/define_template.php:35
+msgid "The fourth footer widget area"
+msgstr "Четвёртая область виджетов подвала"
+
+#: functions/define_template.php:34
+msgid "Fourth Footer Widget Area"
+msgstr "Четвёртая область подвала"
+
+#: functions/define_template.php:33
+msgid "The third footer widget area"
+msgstr "Третья область виджетов подвала"
+
+#: functions/define_template.php:32
+msgid "Third Footer Widget Area"
+msgstr "Третья область подвала"
+
+#: functions/define_template.php:31
+msgid "The second footer widget area"
+msgstr "Вторая область виджетов подвала"
+
+#: functions/define_template.php:30
+msgid "Second Footer Widget Area"
+msgstr "Вторая область подвала"
+
+#: functions/define_template.php:29
+msgid "The first footer widget area"
+msgstr "Первая область виджетов подвала"
+
+#: functions/define_template.php:28
+msgid "First Footer Widget Area"
+msgstr "Первая область подвала"
+
+#: functions/define_template.php:27
+msgid "The secondary widget area"
+msgstr "Дополнительная область виджетов"
+
+#: functions/define_template.php:26
+msgid "Secondary Widget Area"
+msgstr "Дополнительная область"
+
+#: functions/define_template.php:25
+msgid "The primary widget area"
+msgstr "Основная область виджетов"
+
+#: functions/define_template.php:24
+msgid "Primary Widget Area"
+msgstr "Основная область"
+
+#: functions/define_template.php:23 loop.php:53
+msgid "Sorry no post matched your criteria"
+msgstr "Записей по вашему запросу не найдено."
+
+#: functions/define_template.php:22
+msgid "Home"
+msgstr "Главная"
+
+#: functions/define_template.php:21
+msgid "About %s"
+msgstr "Об авторе %s"
+
+#: functions/define_template.php:20
+msgid "Author Archives: %s"
+msgstr "Архив автора: %s"
+
+#: functions/define_template.php:19
+msgid "Pages:"
+msgstr "Страниц:"
+
+#: functions/define_template.php:17
+msgid "Bookmark the"
+msgstr "Добавить в закладки"
+
+#: functions/define_template.php:18
+msgid "&nbsp;permalink"
+msgstr "&nbsp;постоянную&nbsp;ссылку"
+
+#: functions/define_template.php:16
+msgid "Edit"
+msgstr "Изменить"
+
+#: functions/define_template.php:15
+msgid "Link to full-size image"
+msgstr "Ссылка на полноразмерное изображение"
+
+#: functions/define_template.php:14
+msgid "Full size is %s pixels"
+msgstr "Полный размер: %s пикселей"
+
+#: functions/define_template.php:13
+msgid "Published %2$s"
+msgstr "Опубликовано %2$s"
+
+#: functions/define_template.php:12
+msgid "View all posts by %s"
+msgstr "Посмотреть все записи автора %s"
+
+#: functions/define_template.php:11
+msgid "By %2$s"
+msgstr "Автор: %2$s"
+
+#: functions/define_template.php:10
+msgid "Return to %s"
+msgstr "Вернуться: %s"
+
+#: functions/define_template.php:8
+msgid "&larr; Older Posts"
+msgstr "&larr; Предыдущие записи"
+
+#: functions/define_template.php:7
+msgid "Try Looking Monthly Archives"
+msgstr "Попробуйте просмотреть архив за месяц"
+
+#: functions/define_template.php:9
+msgid "Newer posts &rarr;"
+msgstr "Следующие записи &rarr;"
+
+#: functions/define_template.php:6
+msgid "Most Used Categories"
+msgstr "Часто используемые рубрики"
+
+#: functions/define_template.php:5
+msgid "Blog Archives"
+msgstr "Архив блога"
+
+#: functions/define_template.php:4
+msgid "Yearly Archives"
+msgstr "Архив за год"
+
+#: functions/define_template.php:2
+msgid "Daily Archives"
+msgstr "Архив за день"
+
+#: functions/define_template.php:3
+msgid "Monthly Archives"
+msgstr "Архив за месяц"
+
+#: functions/class-options-sanitization.php:427
+msgid "Bold Italic"
+msgstr "Жирный курсив"
+
+#: functions/class-options-sanitization.php:426
+msgid "Bold"
+msgstr "Жирный"
+
+#: functions/class-options-sanitization.php:425
+msgid "Italic"
+msgstr "Курсив"
+
+#: functions/class-options-sanitization.php:424
+msgid "Normal"
+msgstr "Обычный"
+
+#: functions/class-options-sanitization.php:352
+msgid "Fixed in Place"
+msgstr "Фиксированный"
+
+#: functions/class-options-sanitization.php:351
+msgid "Scroll Normally"
+msgstr "С обычной прокруткой"
+
+#: functions/class-options-sanitization.php:339
+msgid "Bottom Right"
+msgstr "Внизу справа"
+
+#: functions/class-options-sanitization.php:338
+msgid "Bottom Center"
+msgstr "Внизу посередине"
+
+#: functions/class-options-sanitization.php:337
+msgid "Bottom Left"
+msgstr "Внизу слева"
+
+#: functions/class-options-sanitization.php:336
+msgid "Middle Right"
+msgstr "Посередине справа"
+
+#: functions/class-options-sanitization.php:335
+msgid "Middle Center"
+msgstr "Посередине"
+
+#: functions/class-options-sanitization.php:334
+msgid "Middle Left"
+msgstr "Посередине слева"
+
+#: functions/class-options-sanitization.php:333
+msgid "Top Right"
+msgstr "Вверху справа"
+
+#: functions/class-options-sanitization.php:332
+msgid "Top Center"
+msgstr "Вверху посередине"
+
+#: functions/class-options-sanitization.php:331
+msgid "Top Left"
+msgstr "Вверху слева"
+
+#: functions/class-options-sanitization.php:319
+msgid "Repeat All"
+msgstr "Повторять везде"
+
+#: functions/class-options-sanitization.php:318
+msgid "Repeat Vertically"
+msgstr "Повторять вертикально"
+
+#: functions/class-options-sanitization.php:317
+msgid "Repeat Horizontally"
+msgstr "Повторять горизонтально"
+
+#: functions/class-options-sanitization.php:316
+msgid "No Repeat"
+msgstr "Не повторять"
+
+#: footer.php:68
+msgid "Proudly powered by %s"
+msgstr "Сайт работает на %s"
+
+#: footer.php:68
+msgid "http://themes.t15.org/indreams"
+msgstr "http://themes.t15.org/indreams"
+
+#. Theme URI of the plugin/theme
+msgid "http://wpthemes.t15.org/indreams/"
+msgstr "http://wpthemes.t15.org/indreams/"
+
+#. Author of the plugin/theme
+msgid "Yogesh Bhade"
+msgstr "Yogesh Bhade"

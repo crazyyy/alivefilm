@@ -121,7 +121,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -239,7 +239,7 @@ html {
 }
 
 body {
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -2050,14 +2050,14 @@ fieldset[disabled] .btn-danger:hover {
 }
 
 body {
-  font-family: Proxima Nova,sans-serif;
+  font-family: Proxima Nova, sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.1;
   min-width: 320px;
-  -webkit-transition: background-color .75s ease,color 105ms ease,opacity 45ms ease;
-  -o-transition: background-color .75s ease,color 105ms ease,opacity 45ms ease;
-  transition: background-color .75s ease,color 105ms ease,opacity 45ms ease;
+  -webkit-transition: background-color .75s ease, color 105ms ease, opacity 45ms ease;
+  -o-transition: background-color .75s ease, color 105ms ease, opacity 45ms ease;
+  transition: background-color .75s ease, color 105ms ease, opacity 45ms ease;
   color: #565656;
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
@@ -2356,9 +2356,6 @@ section {
   min-width: 100%;
   height: auto;
   min-height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -2465,9 +2462,6 @@ footer .footer-social a:hover {
     -moz-box-align: center;
     -webkit-box-pack: center;
     -moz-box-pack: center;
-    -ms-flex-align: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
     justify-content: center;
   }
   div.wpcf7 {
@@ -2490,11 +2484,80 @@ footer .footer-social a:hover {
 }
 
 @media (max-width: 767px) {
+  header .header--logo {
+    padding-top: 40px;
+  }
+  header .header-navlang .header--nav,
+  header .header-navlang .language-chooser {
+    position: absolute;
+    top: -110px;
+  }
+  header .header-navlang .header--nav {
+    right: 30px;
+  }
+  header .header-navlang .language-chooser {
+    left: 30px;
+    padding: 0;
+  }
+  header .header-navlang .language-chooser li {
+    margin-right: 10px;
+  }
+  header .header-navlang .language-chooser li a {
+    font-size: 18px;
+  }
   .fullscreen-bg {
-    background: url(../img/videoframe.jpg) 50%/cover no-repeat;
+    background-color: #dec1b9;
+    background-image: url(../img/videoframe.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 50% 45%;
+    background-size: 55%;
+  }
+  .fullscreen-bg:after {
+    font-size: 20px;
+    font-weight: 300;
+    position: absolute;
+    right: 90px;
+    bottom: 130px;
+    left: 90px;
+    content: 'Unique wedding video on Cyprus and all around THE WORLD';
+    text-align: center;
+    text-transform: uppercase;
+    color: #555555;
   }
   .fullscreen-bg__video {
     display: none;
+  }
+  body.home footer {
+    bottom: 20px;
+  }
+  body.home footer .footer-copyright,
+  body.home footer .footer-copyright a,
+  body.home footer .footer-social,
+  body.home footer .footer-social a {
+    color: #000000 !important;
+  }
+}
+
+@media (max-width: 650px) {
+  header .header--logo {
+    padding-top: 60px;
+  }
+  header .header-navlang .header--nav,
+  header .header-navlang .language-chooser {
+    position: absolute;
+    top: -130px;
+  }
+  .fullscreen-bg {
+    background-position: 50% 45%;
+    background-size: 60%;
+  }
+  .fullscreen-bg:after {
+    font-size: 20px;
+    position: absolute;
+    right: 90px;
+    bottom: 130px;
+    left: 90px;
   }
 }
 
@@ -2504,8 +2567,18 @@ footer .footer-social a:hover {
     width: 100%;
   }
   .modalnav {
-    -webkit-background-size: 80% auto;
     background-size: 80% auto;
+  }
+  .fullscreen-bg {
+    background-position: 50% 45%;
+    background-size: 60%;
+  }
+  .fullscreen-bg:after {
+    font-size: 20px;
+    position: absolute;
+    right: 90px;
+    bottom: 130px;
+    left: 90px;
   }
 }
 
